@@ -1,0 +1,7 @@
+[submodule "config-server"]
+	path = config-server
+	url = https://github.com/tavjb/config-server
+
+[submodule "discovery-server"]
+	path = discovery-server
+	url = https://github.com/tavjb/discovery-server
