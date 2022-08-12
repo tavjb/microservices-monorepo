@@ -1,6 +1,7 @@
 # Microservices
 
-This is a spring-cloud based microservices project that consits of several git repos:
+## This is a spring-cloud based microservices project that consits of several git repos:
+
 Infrastructure:
   config-server (https://github.com/tavjb/config-server):
     Includes the spring-cloud-config-server library, provides configuration for the microservices, the
