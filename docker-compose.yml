@@ -1,0 +1,52 @@
+version: "3.9"
+services:
+  discovery-server:
+    build:
+      context: ./discovery-server
+    image: discovery-server
+    container_name: discovery-server
+    ports:
+      - 8761:8761
+    networks:
+      - ms-network
+
+  config-server:
+    build:
+      context: ./config-server
+    image: config-server
+    container_name: config-server
+    ports:
+      - 50000:50000
+    networks:
+      - ms-network
+
+  greeting-service:
+    build:
+      context: ./microservices/greeting-service
+    image: greeting-service
+    ports:
+      - 1000:1000
+    networks:
+      - ms-network
+    healthcheck:
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+
+  time-of-day-service:
+    build:
+      context: ./microservices/time-of-day-service
+    image: time-of-day-service
+    networks:
+      - ms-network
+    deploy:
+      mode: replicated
+      replicas: 3
+    healthcheck:
+      interval: 10s
+      timeout: 15s
+      retries: 5
+
+networks:
+  ms-network: {}
