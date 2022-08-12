@@ -5,3 +5,11 @@
 [submodule "discovery-server"]
 	path = discovery-server
 	url = https://github.com/tavjb/discovery-server
+
+[submodule "greeting-service"]
+	path = microservices/greeting-service
+	url = https://github.com/tavjb/greeting-service
+
+[submodule "time-of-day-service"]
+	path = microservices/time-of-day-service
+	url = https://github.com/tavjb/time-of-day-service
