@@ -2,7 +2,7 @@
 
 ## This is a spring-cloud based microservices project that consits of several git repos:
 
-Infrastructure:
+### Infrastructure:
   config-server (https://github.com/tavjb/config-server):
     Includes the spring-cloud-config-server library, provides configuration for the microservices, the
     actual configuration is at: https://github.com/tavjb/microservices-config
@@ -12,7 +12,7 @@ Infrastructure:
     whenever a service requries another service's address, the discovery server provides it, which means services don't have
     to be aware of IPs and ports of eachother, moreover, the discovery server manages multiple instances of each service
   
-Microservices:
+### Microservices:
   greeting-service (https://github.com/tavjb/greeting-service):
     An application that exposes a simple 'greeting' RESTful api.
     This app is both a config client and a eureka client.
